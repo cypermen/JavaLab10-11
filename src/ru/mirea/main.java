@@ -1,5 +1,8 @@
 package ru.mirea;
+import java.io.File;
 import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -26,12 +29,23 @@ public class main {
         MyArray arrb = new MyArray(b);
         MyArray arrs = new MyArray(s);
         //Тест третьего задания Написать функцию, которая сохранит содержимое каталога в список и выведет первые 5 элементов на экран.
-        arrl.getArrIndex(2);
+        System.out.println();arrl.getArrIndex(2);
         arri.getArrIndex(2);
         arrb.getArrIndex(2);
         arrs.getArrIndex(2);
+        //Тест четвёртого задания Написать функцию, которая сохранит содержимое каталога в список и выведет первые 5 элементов на экран.
+        Filelist("C:\\");
+    }
 
+    public static void Filelist(String path){
+        File f = new File(path);
+        String[] fArray = null;
+        if (f.exists()||f.isDirectory()) fArray = f.list(null);
+        else System.out.print("Папка не найдена");
+        ArrayList<String> list = new ArrayList(Arrays.asList(fArray));
 
-
+        for (int i =0; i<list.size();i++) {
+            if(i<5) System.out.println(list.get(i));
+        }
     }
 }
