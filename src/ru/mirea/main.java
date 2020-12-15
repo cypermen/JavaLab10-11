@@ -1,10 +1,7 @@
 package ru.mirea;
 import java.io.File;
 import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 
 public class main {
@@ -35,6 +32,10 @@ public class main {
         arrs.getArrIndex(2);
         //Тест четвёртого задания Написать функцию, которая сохранит содержимое каталога в список и выведет первые 5 элементов на экран.
         Filelist("C:\\");
+        //Тест пятого задания
+        ArrayList<Integer> iarr = Solution.newArrayList(10,20,30);
+        ArrayList<String> sarr = Solution.newArrayList("new","new1","new2");
+        HashMap<String, Integer> hash = Solution.newHashMap(sarr,iarr);
     }
 
     public static void Filelist(String path){
